@@ -6,7 +6,7 @@ def to_uperchar(character):
         return ord(character)
 
 
-def to_string(string):
+def uppercase(string):
     new_string = ''
     for x in string:
         new_string += "%c" % to_uperchar(x)
