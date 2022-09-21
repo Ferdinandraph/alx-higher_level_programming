@@ -10,3 +10,4 @@ def to_string(string):
     new_string = ''
     for x in string:
         new_string += "%c" % to_uperchar(x)
+    print("{:s}".format(new_string))
