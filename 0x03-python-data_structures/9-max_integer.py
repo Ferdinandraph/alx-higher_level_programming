@@ -7,4 +7,3 @@ def max_integer(my_list=[]):
         if my_list[i] > max_No:
             max_No = my_list[i]
     return(max_No)
-print(max_integer([2, 4, 66, 68]))
