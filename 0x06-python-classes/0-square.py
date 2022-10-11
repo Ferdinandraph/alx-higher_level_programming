@@ -3,6 +3,5 @@
 
 
 class Square:
-    def square():
-        """represents a square"""
-        pass
+    """represents a square"""
+    pass
