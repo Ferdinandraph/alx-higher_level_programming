@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+def printobject:
+	a = 15
+	print(type(a))
