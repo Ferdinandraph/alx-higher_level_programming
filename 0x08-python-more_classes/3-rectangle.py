@@ -1,28 +1,27 @@
 #!/usr/bin/python3
-"""Defines a rectangle class"""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    """represent a Rectangle"""
+    """Represent a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """Initialize a new rectangle
+        """Initialize a new Rectangle.
 
         Args:
-            width (int, optional): _width of the Rectanle_. Defaults to 0.
-            height (int, optional): _height of the Rectangle_. Defaults to 0.
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """the getter representation of the width"""
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """the setter representation of the width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,12 +30,11 @@ class Rectangle:
 
     @property
     def height(self):
-        """the getter representation of the height"""
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """the setter representation of the height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -44,26 +42,26 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the area of a triangle"""
+        """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
     def perimeter(self):
-        """Returns the perimeter of a triangle"""
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((2 * self.__width) + (2 * self.__height))
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Represent the Rectangle with the character #
-        Returns:
-            the printable representation of the triangle
+        """Return the printable representation of the Rectangle.
+
+        Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
-            print('')
-        rec = []
+            return ("")
+
+        rect = []
         for i in range(self.__height):
-            for j in range(self.__width):
-                (rec.append("#"))
+            [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rec.append("\n")
-        return ("".join(rec))
+                rect.append("\n")
+        return ("".join(rect))
