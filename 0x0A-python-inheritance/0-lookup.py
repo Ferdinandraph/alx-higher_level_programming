@@ -4,7 +4,7 @@
 
 def lookup(obj):
     """the lookup function
-   
+
 
     Args:
         obj: contains all methods and attributes"""
