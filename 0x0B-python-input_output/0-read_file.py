@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""function that reads a text file"""
+"""defines the function read_file"""
 
 
 def read_file(filename=""):
-    """the function to be implemented"""
+    """function that reads a text file in UTF-8"""
 
-    with open(filename, encoding= "utf-8") as fname:
+    with open(filename, encoding="utf-8") as fname:
         print(fname.read(), end='')
