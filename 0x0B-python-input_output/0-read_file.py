@@ -6,4 +6,4 @@ def read_file(filename=""):
     """the function to be implemented"""
 
     with open(filename, encoding= "utf-8") as fname:
-        print(fname.read())
+        print(fname.read(), end='')
