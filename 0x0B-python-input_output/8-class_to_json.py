@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-"""defines class to json"""
+"""Defines a Python class-to-JSON function."""
 
 
 def class_to_json(obj):
-    """ Function that retuns the dictionary description of an obj """
-
-    des = {}
-
-    if hasattr(obj, __dict__):
-        des = obj.__dict__.copy()
-        return des
+    """Return the dictionary represntation of a simple data structure."""
+    return obj.__dict__
