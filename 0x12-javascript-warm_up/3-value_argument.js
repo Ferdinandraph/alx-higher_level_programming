@@ -1,3 +1,2 @@
-#!/usr/bin/bash
-const check = process.argv;
-console.log(typeof check[2] === 'undefined' ? 'No argument' : check[2]);
+#!/usr/bin/node
+console.log(typeof process.argv[2] === 'undefined' ? 'No argument' : process.argv[2]);
