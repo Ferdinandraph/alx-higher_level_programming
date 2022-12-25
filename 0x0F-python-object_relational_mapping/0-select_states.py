@@ -9,7 +9,11 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    c = db.cursor()
-    c.execute("SELECT * FROM `states`")
-    [print(state) for state in c.fetchall()]
+    username, password, database = args[1], args[2], args[3]
+    db = MySQLdb.connect(user=username, passwd=password, db=database)
+    db.query("SELECT * FROM states ORDER BY id")
+    r = db.store_result()
+    t = r.fetch_row(maxrows=0)
+    for i in t:
+        print(i)
+ 
